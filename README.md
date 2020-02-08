@@ -1,8 +1,8 @@
-# Starwars Character Quiz
+# Angular Starwars API 
 
-This star wars project was created with Angular version 8.3.24 by Michael Ichangai Mburu.
+This angular star wars api quiz project was created by Michael Ichangai Mburu.
 
-## Installing Dependecies It
+## Installing Dependecies
 Run `npm install` to install the dependecies. 
 
 ## Running It
