@@ -1,0 +1,36 @@
+<form (ngSubmit)="onSubmit(form)" #form="ngForm">
+    <h3 for="">StarWars Character Quiz</h3>
+    <hr>
+    <div class="row">
+       
+        <div class="col-lg-4">
+            <div class="form-group">
+                <label for="name">Character Name</label>
+                <input 
+                type="text" 
+                name="name" 
+                class="form-control" 
+                placeholder="" 
+                [ngModel] = "defaultName" 
+                required
+                #nameCtrl="ngModel"
+                >
+                <span *ngIf="nameCtrl.invalid && nameCtrl.touched" class="help-block">Please enter a name</span>
+            </div> 
+        </div>
+        <div class="col-xs-4">
+            <div class="form-group">
+                <label for="side">Choose Side</label>
+                <select class="form-control" name="side" id="side" ngModel>
+                    <option *ngFor="let option of availablesides" [value]="option.value">
+                      {{option.display}}
+                      </option>
+                </select>
+            </div>   
+        </div>
+        <div class="col-lg-4">
+            <label>Create Character</label><br>
+            <button type="button" type="submit" [disabled]="form.invalid" class="btn btn-primary">Add Character</button> 
+        </div>
+    </div>
+</form>
